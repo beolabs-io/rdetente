@@ -1,3 +1,33 @@
 <div id="pricings-container" class="container">
 
+    <div class="accordion" id="accordion-pricings-container">
+
+        <!-- Cards Items -->
+
+        <div *ngFor="let pricingCategory of pricingCategories" class="card">
+
+            <div class="card-header" [id]=" 'heading-' + pricingCategories.indexOf(pricingCategory) ">
+
+                <h2 class="mb-0">
+                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" [attr.data-target]=" '#collapse-' + pricingCategories.indexOf(pricingCategory) " aria-expanded="false" [attr.aria-controls]=" 'collapse-' + pricingCategories.indexOf(pricingCategory)">
+
+                    {{ pricingCategory.title }}
+
+                </button>
+                </h2>
+
+            </div>
+
+            <div [id]=" 'collapse-' + pricingCategories.indexOf(pricingCategory) " class="collapse" [attr.aria-labelledby]=" 'heading-' + pricingCategories.indexOf(pricingCategory) " data-parent="#accordion-pricings-container">
+
+                <div class="card-body">
+                    
+                    <p *ngFor="let item of pricingCategory.items">{{ item.description }}, {{ item.duration }}, {{ item.price }}</p>
+
+                </div>
+
+            </div>
+
+        </div>
+
 </div>
