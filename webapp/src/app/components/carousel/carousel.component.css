@@ -1,0 +1,6 @@
+#main-carousel {
+
+    background-color: lightgray;
+    
+    height: calc(100vh - 90px);
+}
