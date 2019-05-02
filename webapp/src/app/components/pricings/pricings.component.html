@@ -9,7 +9,7 @@
             <div class="card-header" [id]=" 'heading-' + pricingCategories.indexOf(pricingCategory) ">
 
                 <h2 class="mb-0">
-                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" [attr.data-target]=" '#collapse-' + pricingCategories.indexOf(pricingCategory) " aria-expanded="false" [attr.aria-controls]=" 'collapse-' + pricingCategories.indexOf(pricingCategory)">
+                <button class="btn btn-link collapsed" style="padding: 0px;" type="button" data-toggle="collapse" [attr.data-target]=" '#collapse-' + pricingCategories.indexOf(pricingCategory) " aria-expanded="false" [attr.aria-controls]=" 'collapse-' + pricingCategories.indexOf(pricingCategory)">
 
                     {{ pricingCategory.title }}
 
@@ -22,7 +22,13 @@
 
                 <div class="card-body">
                     
-                    <p *ngFor="let item of pricingCategory.items">{{ item.description }}, {{ item.duration }}, {{ item.price }}</p>
+                    <div *ngFor="let item of pricingCategory.items" style="margin-bottom:1rem;">
+                        
+                        <p style="margin-bottom:0px;">{{ item.description }}</p>
+                        <span class="badge badge-pill badge-light">{{ item.duration }}</span>
+                        <span class="badge badge-pill badge-light">{{ item.price }}</span>
+
+                    </div>
 
                 </div>
 
