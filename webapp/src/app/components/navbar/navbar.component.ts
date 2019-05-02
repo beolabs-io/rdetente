@@ -8,4 +8,7 @@ import { Component } from '@angular/core';
 
 export class NavbarComponent {
 
+  brandName = "Un R de Détente"
+
+  
 }
