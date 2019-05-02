@@ -8,7 +8,6 @@ import { Component } from '@angular/core';
 
 export class NavbarComponent {
 
-  brandName = "Un R de Détente"
-
+  brandName = "Un R de Détente";
   
 }
