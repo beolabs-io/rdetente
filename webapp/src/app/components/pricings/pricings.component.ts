@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
 
 export class PricingsComponent {
   
-  pricingsTitle = 'Prestations Coiffure'
+  pricingsTitle = 'Prestations'
 
   pricingCategories = [
 
