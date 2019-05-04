@@ -1,10 +1,40 @@
 #pricings-container {
 
     min-height: 300px; 
-    background-color: lightgrey;
+    background-color: #fff;
 
     padding-left: 0px;
     padding-right: 0px;
 
     max-width: 100%;
+}
+
+#pricings-title-container {
+
+    padding: 1.2rem 1.25rem;
+}
+
+#pricings-title {
+
+    margin-top: auto;
+    margin-bottom: auto;
+    color: #1a1a1a;
+    font-weight: bold;
+}
+
+.badge-duration {
+
+    color: white;
+    background-color: #343a40;
+}
+
+.badge-price {
+
+    color: white;
+    background-color: #343a40;
+}
+
+.pricing-item-row {
+
+    
 }

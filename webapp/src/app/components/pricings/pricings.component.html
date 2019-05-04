@@ -1,5 +1,9 @@
 <div id="pricings-container" class="container">
 
+    <div id="pricings-title-container" class="container-fluid">
+        <p id="pricings-title">{{ pricingsTitle.toUpperCase() }}</p>
+    </div>
+
     <div class="accordion" id="accordion-pricings-container">
 
         <!-- Cards Items -->
@@ -21,12 +25,20 @@
             <div [id]=" 'collapse-' + pricingCategories.indexOf(pricingCategory) " class="collapse" [attr.aria-labelledby]=" 'heading-' + pricingCategories.indexOf(pricingCategory) " data-parent="#accordion-pricings-container">
 
                 <div class="card-body">
-                    
-                    <div *ngFor="let item of pricingCategory.items" style="margin-bottom:1rem;">
-                        
-                        <p style="margin-bottom:0px;">{{ item.description }}</p>
-                        <span class="badge badge-pill badge-light">{{ item.duration }}</span>
-                        <span class="badge badge-pill badge-light">{{ item.price }}</span>
+
+                    <div class="row" *ngFor="let item of pricingCategory.items">
+
+                        <div class="col-12 col-md-8">
+
+                            <p style="margin-bottom:1rem;">{{ item.description }}</p>
+
+                        </div>
+
+                        <div class="col-12 col-md-4 text-left text-md-right">
+
+                            <p style="margin-bottom:1rem;">{{ item.duration }}, {{ item.price }}<i class="fas fa-euro-sign" style="margin-left:5px;"></i></p>
+                            
+                        </div>
 
                     </div>
 
