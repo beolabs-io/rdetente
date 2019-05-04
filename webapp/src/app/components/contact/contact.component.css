@@ -1,0 +1,10 @@
+#contact-container {
+
+    min-height: 300px; 
+    background-color: blueviolet;
+
+    padding-left: 0px;
+    padding-right: 0px;
+
+    max-width: 100%;
+}
