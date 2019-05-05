@@ -1,12 +1,37 @@
 #contact-container {
 
     color: black;
-
     background-color: white;
 
     padding: 20px;
-
     max-width: 100%;
+}
+
+.icon {
+
+    margin-right:5px; 
+    margin-left:5px;
+}
+
+.flip {
+
+    -moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    filter: FlipH;
+    -ms-filter: "FlipH";
+}
+
+.table-opening-hours
+{
+    font-size: smaller;
+    font-weight: lighter;
+}
+
+.table-opening-hours td {
+
+    padding: 1px;
 }
 
 
