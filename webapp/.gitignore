@@ -44,3 +44,8 @@ testem.log
 # System Files
 .DS_Store
 Thumbs.db
+
+# Specifics
+*.tar
+webapp/.DS_Store
+webapp/deploy.vutr.fabric.py
