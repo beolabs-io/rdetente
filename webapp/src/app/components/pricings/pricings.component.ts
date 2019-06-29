@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { ApplicationStateService } from '../../services/application-state/application-state.service';
 
 @Component({
@@ -7,7 +7,7 @@ import { ApplicationStateService } from '../../services/application-state/applic
   styleUrls: ['./pricings.component.css']
 })
 
-export class PricingsComponent implements OnInit {
+export class PricingsComponent {
 
   constructor(private applicationStateService : ApplicationStateService) { }
 
