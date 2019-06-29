@@ -3,55 +3,46 @@
     <div class="col-12 text-center" style="margin-top:40px; margin-bottom:40px;">
     
         <h3>Nos Prestations</h3>
-        
+
         <div style="background-color:rgba(0,0,0,0.2); height:1px; width:200px; margin-left:auto; margin-right:auto; margin-bottom:5px;"></div>
                 
         <p style="color: rgba(0,0,0,0.4);">coiffure, spa, massage</p>
         
     </div>
 
-    <div class="accordion" id="accordion-pricings-container" style="padding-bottom:40px;">
+    <div class="container">
 
-        <!-- Cards Items -->
-
-        <div *ngFor="let pricingCategory of pricingCategories" class="card">
-
-            <div class="card-header" [id]=" 'heading-' + pricingCategories.indexOf(pricingCategory) ">
-
-                <h2 class="mb-0">
-                <button class="btn btn-link collapsed" style="padding: 0px;" type="button" data-toggle="collapse" [attr.data-target]=" '#collapse-' + pricingCategories.indexOf(pricingCategory) " aria-expanded="false" [attr.aria-controls]=" 'collapse-' + pricingCategories.indexOf(pricingCategory)">
-
-                    {{ pricingCategory.title }}
-
-                </button>
-                </h2>
-
+        <div class="row" *ngIf="showCategories">
+            <div class="col-sm pricing-category" *ngFor="let category of pricingCategories" (click)="onPricingCategoryClick(category)">
+                <img src="{{ category.img }}" class="img-thumbnail img-pricing-category disable-select">
+                <p class="pricing-category-title disable-select">{{ category.title }}</p>
+                <p class="pricing-category-description disable-select">{{ category.description }}</p>
             </div>
-
-            <div [id]=" 'collapse-' + pricingCategories.indexOf(pricingCategory) " class="collapse" [attr.aria-labelledby]=" 'heading-' + pricingCategories.indexOf(pricingCategory) " data-parent="#accordion-pricings-container">
-
-                <div class="card-body">
-
-                    <div class="row" *ngFor="let item of pricingCategory.items">
-
-                        <div class="col-12 col-md-8">
-
-                            <p style="margin-bottom:1rem;">{{ item.description }}</p>
-
-                        </div>
-
-                        <div class="col-12 col-md-4 text-left text-md-right">
-
-                            <p style="margin-bottom:1rem;">{{ item.duration }}, {{ item.price }}<i class="fas fa-euro-sign" style="margin-left:5px;"></i></p>
-                            
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-
         </div>
+
+        <div class="row" *ngIf="!showCategories">
+            <div class="col" id="pricing-category-details">
+                <div class="row pricing-category-details-header">
+                    <div class="col text-left">{{ selectedCategory.title }}</div>
+                    <div class="col text-right"><span (click)="showPricingCategories()">retour autres prestations<i class="fas fa-chevron-right" style="margin-left:5px;"></i></span></div>
+                </div>
+                <div class="row">
+                    <table class="table" *ngFor="let prestation of selectedCategory.prestations">
+                        <p>{{ prestation.group }}</p>
+                        <tbody>
+                            <tr *ngFor="let item of prestation.items">
+                                <th class="text-left" >{{ item.description }}</th>
+                                <th class="text-right">{{ item.duration }}</th>
+                                <th class="text-right">{{ item.price}}</th>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
 
 </div>

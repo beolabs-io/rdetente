@@ -1,6 +1,8 @@
+// MODULES
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
+// COMPONENTS
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { CarouselComponent } from './components/carousel/carousel.component';
@@ -9,6 +11,9 @@ import { PresentationComponent } from './components/presentation/presentation.co
 import { ContactComponent } from './components/contact/contact.component';
 import { MapComponent } from './components/map/map.component';
 import { TeamComponent } from './components/team/team.component';
+
+// SERVICES
+import { ApplicationStateService } from './services/application-state/application-state.service'
 
 @NgModule({
   declarations: [
@@ -24,7 +29,7 @@ import { TeamComponent } from './components/team/team.component';
   imports: [
     BrowserModule
   ],
-  providers: [],
-  bootstrap: [AppComponent, NavbarComponent, CarouselComponent, PricingsComponent, PresentationComponent, ContactComponent, MapComponent, TeamComponent]
+  providers: [ ApplicationStateService ],
+  bootstrap: [ AppComponent, NavbarComponent, CarouselComponent, PricingsComponent, PresentationComponent, ContactComponent, MapComponent, TeamComponent ]
 })
 export class AppModule { }

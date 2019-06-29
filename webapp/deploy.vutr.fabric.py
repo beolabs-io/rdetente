@@ -8,7 +8,7 @@ webAppCodename                    = 'unrdedetente-webapp'
 serverAppContainerPortExposure    = '80'              
 deploymentServerUsername          = 'root'              
 deploymentServerIpAddress         = '173.199.71.187'    
-deploymentServerApiPortExposure   = '8020'             
+deploymentServerApiPortExposure   = '80'             
 
 remotePwd = getpass.getpass("Remote Host Password ?")
 
