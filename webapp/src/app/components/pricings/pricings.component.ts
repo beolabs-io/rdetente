@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { ApplicationStateService } from '../../services/application-state/application-state.service';
 
+declare var $: any;
+
 @Component({
   selector: 'pricings',
   templateUrl: './pricings.component.html',
