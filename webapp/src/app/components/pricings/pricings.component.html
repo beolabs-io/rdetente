@@ -12,7 +12,7 @@
 
     <div class="container">
 
-        <div class="row" *ngIf="showCategories">
+        <div id="categories-container" class="row" *ngIf="showCategories">
             <div class="col-sm pricing-category" *ngFor="let category of pricingCategories" (click)="onPricingCategoryClick(category)">
                 <img src="{{ category.img }}" class="img-thumbnail img-pricing-category disable-select">
                 <p class="pricing-category-title disable-select">{{ category.title }}</p>
@@ -20,7 +20,7 @@
             </div>
         </div>
 
-        <div class="row" *ngIf="!showCategories">
+        <div id="category-details-container" class="row" *ngIf="!showCategories">
             <div class="col" id="pricing-category-details">
                 <div class="row pricing-category-details-header">
                     <div class="col text-left pricing-category-details-title">{{ selectedCategory.title }}</div>

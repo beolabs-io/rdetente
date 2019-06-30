@@ -423,12 +423,14 @@ export class PricingsComponent {
 
     this.showCategories = false;
     this.selectedCategory = category;
+    $('#category-details-container').scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"});
   }
 
   showPricingCategories() : void {
 
     this.showCategories = true;
     this.selectedCategory = null;
+    $('#categories-container').scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"});
   }
 
 }
