@@ -27,7 +27,7 @@ import { ApplicationStateService } from './services/application-state/applicatio
     TeamComponent,
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
   ],
   providers: [ ApplicationStateService ],
   bootstrap: [ AppComponent, NavbarComponent, CarouselComponent, PricingsComponent, PresentationComponent, ContactComponent, MapComponent, TeamComponent ]

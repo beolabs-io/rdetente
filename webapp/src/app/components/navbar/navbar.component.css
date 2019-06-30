@@ -2,3 +2,12 @@
 
     min-height: 90px;
 }
+
+.btn-rdv {
+
+    border-radius: 5px;
+    text-align: center;
+    padding-right: 10px;
+    padding-left: 10px;
+    opacity: 0.5;
+}
