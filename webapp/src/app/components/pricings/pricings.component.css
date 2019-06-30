@@ -121,24 +121,60 @@
     background-color: rgba(0, 0, 0, 0.02);
 }
 
-.btn-close-category:hover {
+.btn-close-category {
 
     color:#1a1a1a;
+    font-size: larger;
+}
+
+.btn-close-category:hover {
+
+    opacity: 0.5;
 }
 
 .pricing-category-details-group-title {
 
-    margin-left:25px;
+    margin-left:30px;
     color:#1a1a1a;
     opacity: 0.5;
+    text-decoration: underline;
 }
 
-.prestation-duration {
+.pricing-category-details-group-item {
 
-    width: 200px !important;
+    font-weight: 100;
+    min-height: 50px;
+    color:#1a1a1a;
+    line-height: 50px;
+    opacity: 0.8;
 }
 
-.prestation-price {
+.pricing-category-details-group-items-row {
 
-    width: 200px;
+    margin-left:15px;
+    margin-right:20px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.no-border-bottom {
+
+    border-bottom:none;
+}
+
+@media only screen and (max-width: 992px) {
+
+    .pricing-category-details-group-item {
+
+        text-align: left !important;
+        min-height: 25px;
+        line-height: 25px;
+        font-size: smaller;
+    }
+
+    .pricing-category-details-group-items-row{
+
+        padding-top: 15px;
+        padding-bottom: 10px;
+        border-bottom-color: rgba(0, 0, 0, 0.1);
+    }
 }

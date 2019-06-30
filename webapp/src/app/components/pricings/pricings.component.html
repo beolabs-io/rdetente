@@ -24,16 +24,18 @@
             <div class="col" id="pricing-category-details">
                 <div class="row pricing-category-details-header">
                     <div class="col text-left pricing-category-details-title">{{ selectedCategory.title }}</div>
-                    <div class="col text-right btn-close-category disable-select"><span (click)="showPricingCategories()" class="line-">retour autres prestations<i class="fas fa-chevron-right" style="margin-left:5px; font-size:x-small;"></i></span></div>
+                    <div class="col text-right btn-close-category disable-select"><span (click)="showPricingCategories()"><i class="fas fa-th" style="margin-left: 5px;"></i></span></div>
                 </div>
                 <div class="row">
-                    <table class="table table-hover" *ngFor="let prestation of selectedCategory.prestations">
-                        <p class="pricing-category-details-group-title">{{ prestation.group }}</p>
+                    <table class="table" *ngFor="let prestation of selectedCategory.prestations">
+                        <p *ngIf="selectedCategory.prestations.length>1" class="pricing-category-details-group-title">{{ prestation.group }}</p>
                         <tbody>
                             <tr *ngFor="let item of prestation.items">
-                                <td class="text-left">{{ item.description }}</td>
-                                <td class="text-right prestation-duration"><span>{{ item.duration }}<i class="far fa-clock" style="margin-left:5px;"></i></span></td>
-                                <td class="text-right prestation-price">{{ item.price}}<i class="fas fa-euro-sign" style="margin-left:5px;"></i></td>
+                                <div class="row pricing-category-details-group-items-row" [ngClass]="{'no-border-bottom':(prestation.items.indexOf(item)==prestation.items.length-1) ? true : false}">
+                                    <div class="col-lg-8 pricing-category-details-group-item text-left">{{ item.description }}</div>
+                                    <div class="col-lg-2 pricing-category-details-group-item text-right"><span>{{ item.duration }}<i class="far fa-clock" style="margin-left:5px;"></i></span></div>
+                                    <div class="col-lg-2 pricing-category-details-group-item text-right">{{ item.price}}<i class="fas fa-euro-sign" style="margin-left:5px;"></i></div>
+                                </div>
                             </tr>
                         </tbody>
                     </table>
@@ -42,7 +44,6 @@
         </div>
 
     </div>
-
 
 
 </div>
