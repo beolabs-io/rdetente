@@ -410,7 +410,7 @@ export class PricingsComponent {
             { 
               description: 'Diagnostic ou retouche make-up (service offert suite à une prestation)',
               duration: '15min',
-              price: '',
+              price: '-',
             },
           ],
         },

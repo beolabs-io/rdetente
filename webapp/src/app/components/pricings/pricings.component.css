@@ -109,7 +109,7 @@
     padding: 15px;
 }
 
-.table th {
+.table td {
 
     text-transform: none;
     font-weight: 100;
@@ -131,4 +131,14 @@
     margin-left:25px;
     color:#1a1a1a;
     opacity: 0.5;
+}
+
+.prestation-duration {
+
+    width: 200px !important;
+}
+
+.prestation-price {
+
+    width: 200px;
 }
