@@ -49,4 +49,5 @@ Thumbs.db
 *.tar
 webapp/.DS_Store
 webapp/deploy.vutr.fabric.py
-*.jpg
+.jpg
+.key

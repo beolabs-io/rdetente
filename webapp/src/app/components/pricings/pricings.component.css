@@ -74,6 +74,14 @@
     font-size: smaller;
 }
 
+.pricing-category-details-title {
+
+    color:#1a1a1a;
+    font-weight: 100;
+    font-size: larger;
+    margin-bottom: 20px;
+}
+
 .badge-duration {
 
     color: white;
@@ -97,10 +105,30 @@
 
 .pricing-category-details-header {
 
+    margin-top:15px;
     padding: 15px;
 }
 
-.table {
+.table th {
 
-    font-weight: lighter;
+    text-transform: none;
+    font-weight: 100;
+    color:#1a1a1a;
+}
+
+.table tr:hover {
+
+    background-color: rgba(0, 0, 0, 0.02);
+}
+
+.btn-close-category:hover {
+
+    color:#1a1a1a;
+}
+
+.pricing-category-details-group-title {
+
+    margin-left:25px;
+    color:#1a1a1a;
+    opacity: 0.5;
 }
